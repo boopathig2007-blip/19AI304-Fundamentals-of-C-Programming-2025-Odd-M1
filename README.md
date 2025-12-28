@@ -26,7 +26,32 @@ To build a C program that prints integer, float,character, and string literals o
 ### Step 4: 
    Stop
 # Program:
+#include <stdio.h>
+
+int main() {
+ 
+    int a = 25;
+    float b = 12.75;
+    char c = 'A';
+
+   
+    char str[] = "Hello, C Programming";
+
+  
+    printf("Integer literal: %d\n", a);
+    printf("Float literal: %.2f\n", b);
+    printf("Character literal: %c\n", c);
+    printf("String literal: %s\n", str);
+
+    return 0;
+}
+
 # Output:
+Integer literal: 25
+Float literal: 12.75
+Character literal: A
+String literal: Hello, C Programming
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -57,7 +82,28 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 6:  
   Stop
 # Program:
+#include <stdio.h>
+
+
+#define PI 3.14159
+
+int main()
+{
+
+    
+    const int MAX = 100;
+
+  
+    printf("Macro constant PI: %.5f\n", PI);
+    printf("Constant variable MAX: %d\n", MAX);
+
+    return 0;
+}
+
 # Output:
+Macro constant PI: 3.14159
+Constant variable MAX: 100
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -81,7 +127,25 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 5:    
    Stop
 # Program:
+#include <stdio.h>
+
+int main() {
+    int a = 10;          
+    float b = 15.75f;     
+    double c = 123.456;   
+    char d = 'C';        
+    printf("Integer value: %d\n", a);
+    printf("Float value: %.2f\n", b);
+    printf("Double value: %.3lf\n", c);
+    printf("Character value: %c\n", d);
+
+    return 0;
+}
 # Output:
+Integer value: 10
+Float value: 15.75
+Double value: 123.456
+Character value: C
 # Result: 
 
 # 19AI304-Fundamentals-of-C-Programming-2025-Odd
@@ -120,7 +184,58 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+ 
+    printf("Enter two integers: ");
+    scanf("%d %d", &a, &b);
+
+   
+    printf("\nArithmetic Operations:\n");
+    printf("Addition (a + b): %d\n", a + b);
+    printf("Subtraction (a - b): %d\n", a - b);
+    printf("Multiplication (a * b): %d\n", a * b);
+
+    if (b != 0) {
+        printf("Division (a / b): %d\n", a / b);
+        printf("Remainder (a %% b): %d\n", a % b);
+    } else {
+        printf("Division and Remainder: Undefined (division by zero)\n");
+    }
+
+    
+    printf("\nBitwise Operations:\n");
+    printf("Bitwise AND (a & b): %d\n", a & b);
+    printf("Bitwise OR (a | b): %d\n", a | b);
+    printf("Bitwise XOR (a ^ b): %d\n", a ^ b);
+    printf("Left Shift (a << 1): %d\n", a << 1);
+    printf("Right Shift (a >> 1): %d\n", a >> 1);
+    printf("Bitwise NOT (~a): %d\n", ~a);
+    printf("Bitwise NOT (~b): %d\n", ~b);
+
+    return 0;
+}
+
 # Output:
+Arithmetic Operations:
+Addition (a + b): 13
+Subtraction (a - b): 7
+Multiplication (a * b): 30
+Division (a / b): 3
+Remainder (a % b): 1
+
+Bitwise Operations:
+Bitwise AND (a & b): 2
+Bitwise OR (a | b): 11
+Bitwise XOR (a ^ b): 9
+Left Shift (a << 1): 20
+Right Shift (a >> 1): 5
+Bitwise NOT (~a): -11
+Bitwise NOT (~b): -4
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -165,7 +280,37 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char ch;
+
+  
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+
+ 
+    (isdigit(ch)) ? printf("It is a Digit\n") :
+    (isalpha(ch)) ?
+        ((ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||
+          ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U') ?
+          printf("It is a Vowel\n") :
+          printf("It is a Consonant\n")) :
+    printf("It is a Special Symbol\n");
+
+    return 0;
+}
+
 # Output:
+a
+It is a Vowel
+7
+It is a Digit
+#
+It is a Special Symbol
+
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
